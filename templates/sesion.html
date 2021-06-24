@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <title>Sesión|AcadeM@C</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='fonts/style.cs')}}">
+    <!--  Favicon  -->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='icon/favicon.ico')}}">
+</head>
+<body>
+    <h2>Formulario de registro</h2>
+
+    <form action="/action_page.php">
+      <label for="Nombre">Nombre(s):</label><br>
+      <input type="text" id="Nombre" name="Nombre" ><br>
+      <label for="AP">Apellido Paterno:</label><br>
+      <input type="text" id="AP" name="AP" ><br><br>
+      <label for="AM">Apellido Materno:</label><br>
+      <input type="text" id="AM" name="AM" ><br><br>
+      <label for="Ncuenta">Nuero de cuenta:</label><br>
+      <input type="number" id="Ncuenta" name="Ncuenta"><br><br>
+      <p>Nivel academico:</p>
+      <input type="radio" id="nivel1" name="nivel" value="30">
+      <label for="nivel1">Primario</label><br>
+      <input type="radio" id="nivel2" name="nivel" value="60">
+      <label for="nivel2">Secundaria</label><br>
+      <input type="radio" id="nivel3" name="nivel" value="100">
+      <label for="nivel3">Preparatoria</label><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+    <p></p>
+</body>
+</html>

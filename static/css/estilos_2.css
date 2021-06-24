@@ -1,0 +1,27 @@
+*{
+    background-color: #1ABC9C;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    word-wrap: break-word;
+    font-family: monse;
+    src: url(/letra/Montserrat-Regular.ttf)    
+}
+
+canvas{
+    animation: normal;
+}
+
+#ResetButton{
+    font-size: 1.5rem;
+    width: 500px;
+    cursor: pointer;
+}
+
+#turnoAlert{
+    color: black;
+    
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Esta página muestra diversos cursos preparatorianos y universitarios">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/style.css') }}">
+    <!--  Favicon  -->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='icon/favicon.ico') }}">
+    <title>AcadeM@C</title>
+    <style>
+        .personaje{
+            height: 140px;
+            width: 80px;
+            background: url("{{ url_for('static',filename='fotos/sprit.PNG') }}");
+            margin:0 auto;
+            animation: correr .5s  steps(6) infinite;
+            /*background-position: -110px 0;*/
+        }
+
+        @keyframes correr{
+            0%{
+              background-position: 0px;
+            }
+            100% {
+              background-position: -507px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn">
+          <span>&#9776;</span>
+        </div>
+        <ul class="barra">
+          <li>
+            <img src="{{ url_for('static',filename='fotos/arroba.png') }}" alt="menu" class="logr">
+          </li>
+          <li><a href="https://www.facebook.com/CentroAprendizajeAsesoriaDigital"><span class="icon-facebook">Facebook</span></a></li>
+          <li><a href="https://www.facebook.com/CentroAprendizajeAsesoriaDigital"><span class="icon-twitter">Twitter</span></a></li>
+          <li><a href="https://www.instagram.com/insta.caad/?hl=es-la"><span class="icon-instagram">Instagram</span></a></li>
+          <li><a href="https://chat.whatsapp.com/D3NDR1ysHcY2WJNyHtF3PW"><span class="icon-mobile">Whatsapp</span></a></li>
+        </ul>
+      </div>
+<header class="one">
+    <Section>
+        <div class="ancho">
+           <div class="logo">
+                    <p><a href="{{ url_for('index') }}">AcadeM@C</a></p>
+            </div>
+            <nav>
+                <ul class="tabs">
+                    <li><a href="{{ url_for('sesion') }}"><span class="icon-user"></span>Registro</a></li>
+                    <li><a href="{{ url_for('nosotros') }}"><span class="icon-users"></span>Nosotros</a></li> 
+                    <li><a href="{{ url_for('contactos')}}"><span class="icon-phone"></span>Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </Section>
+</header>
+    <section class="container text-and-image section-paddings cover">
+        <div class="main-content">
+            <header class="center-vertical-and-horizontal">
+                <h1>El camino del <span class="green-underline">éxito</span></h1>
+            </header>
+        <div>
+            <ul class="menu">
+                <li><a href="https://www.dgae.unam.mx/">UNAM</a></li>
+                <li><a href="https://www.admision.ipn.mx/se/convocatoria/index.html">POLI</a></li>
+                <li><a href="https://www.comipems.org.mx/trae_page.php?convocatoria">COMIPEMS</a></li>
+            </ul>
+        </div>
+
+    </div>
+        <img src="{{ url_for('static',filename='fotos/alumnos.jpeg') }}" alt="Grupo de alumnos" height="500">
+    </section>
+    <section class="bg-yellow section-padding">
+        <div class="container text-and-image">
+            <div class="text">
+               <p class="subtitle">BIENVENIDO</p> 
+               <P>
+                Estimado estudiante, padre de familia, tutor:
+               </P>
+               <p>
+                La sociedad mexicana y la comunidad internacional está pasando por una situación atípica,
+                la interacción social en sus distintas dimensiones se ha modificado. 
+               </p>
+               <p>
+                En nuestro caso el sistema educativo ha tratado de sortear los retos y barreras que implica
+                el distanciamiento social. 
+               </p>
+               <p>
+                En AcadeM@C buscamos brindar un curso que se adecue a este contexto y que te apoye a ti estudiante
+                en transición de educación básica a media superior a prepararte no solo para presentar el examen, 
+                sino para que llegues lo mejor preparado a tu futuro bachillerato.
+               </p> 
+            </div>
+            <img src="{{ url_for('static',filename='fotos/unam.jpg') }}" alt="UNAM" class="avatar">
+        </div>
+    </section>
+    <section>
+        <div class="conteiner">
+            <article class="element-with-images section-padding">
+                <header class="text">
+                    <p class="subtitle">Curso UNAM</p>
+                    <p class="centero"><b>"Por Mi Raza Hablara El Espirítu"</b></p>
+                    <p>Aprueba el examen de ingreso a la Universidad Nacional Autónoma de México<br>
+                       con este curso. Pasa el examen de ingreso 2021 como miles de aspirantes que<br>
+                       ya han aprobado el examen de admisión. ¡Empieza tu preparación ahora!</p>
+                </header>
+                <div class="images">
+                    <img src="{{ url_for('static',filename='fotos/UNAM.png') }}" alt="Universidad Nacional Autónoma de México_Logo" width="230" height="300">
+                </div>
+            </article>
+
+            <article class="element-with-images section-padding">
+                <header class="text">
+                    <p class="subtitle">Curso IPN</p>
+                    <p class="centero"><b>"La Técnica al servicio de la Patria"</b></p>
+                        <p>Aprueba el examen al Instituto Politécnico Nacional del 2021 con este<br>
+                           curso de preparación para ingresar en la universidad más importante de México.<br>
+                           Pasa el examen de ingreso al IPN como miles de aspirantes que ya han aprobado el examen.</p>
+                </header>
+                <div class="images">
+                    <img src="{{ url_for('static',filename='fotos/ipn.pn') }}g" alt="Instituto Politecnico Nacional_Logo" width="260" height="300">
+                </div>
+            </article>
+
+            <article class="element-with-images section-padding">
+                <header class="text">
+                    <p class="subtitle">Curso COMIPEMS</p>
+                    <p class="centero">Conviertete en un Preparatoriano</p>
+                    <p>Te preparamos para obtener el mejor resultado en la prueba del EXANI 1 para entrar<br>
+                       en preparatoria. Pasa el examen de ingreso 2021 como miles de aspirantes que ya han<br>
+                       aprobado el examen de admisión. ¡Empieza tu preparación ahora!</p>
+                </header>
+                <div class="images">
+                    <img src="{{ url_for('static',filename='fotos/comipems.jpg') }}" alt="comipems_Logo" width="250" height="250">
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="bg-yellow section-padding">
+        <div class="container text-and-image">
+            <div class="text">
+                <p class="center">Metodología AcadeM@C</p> 
+                <div class="container-body">
+ 
+                    <div class="colum4">
+                        <h1><span class="icon-book">Examen Diagnostico</span></h1>
+                        <p>Podrás realizar un examen diagnóstico de <br>
+                           manera gratuita, con el cual, podrás <br>
+                           comparar tu resultado con el que requieres <br>
+                           para alcanzar tus objetivos</p>  
+                           <span class="icon-book"></span>
+                    </div>
+                    <div class="colum5">
+                        <h1><span class="icon-documents">Repaso de Contenidos</span></h1>
+                        <p>Repasa con los mejores profesores todo el contenido <br>
+                           visto durante el curso con los temas enfocados en la <br>
+                           carrera que quieres con el Cuaderno de Reactivos.</p>
+                           <span class="icon-documents"></span>
+                    </div>
+                    <div class="colum6">
+                        <h1><span class="icon-documents">Examenes de Simulación</span></h1>
+    
+                        <p>Se aplica una simulación del examen para conocer<br>
+                           qué tan preparado estás para presentar tu examen.</p>
+                           <span class="icon-documents"></span>
+                    </div>
+                    <div class="colum7">
+                        <h1><span class="icon-book">Asesorías de refuerzo educativo</span></h1>
+    
+                        <p>Se reforzarán los conocimientos adquiridos en el <br>
+                           curso, con talleres de las asignaturas que necesitas<br>
+                           para lograr tu objetivo.</p>
+                           <span class="icon-book"></span>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+    <section class="main"> 
+        <div class="container text-and-image">
+            <div class="text">
+                <p class="center">Lógica Matemática</p> 
+                <iframe class="centra"src="https://www.youtube.com/embed/NvxfYHvcj4Q" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+        </div>
+        <a href="{{ url_for('videos')}}"><img class="centrado" src="{{ url_for('static',filename='fotos/flecha_2.png') }}" alt="Videos"></a>
+    </section>
+    <section class="bg-yellow section-padding">
+        <p class="center" >Estudiantes trabajando</p> 
+        <div class="personaje"></div>
+    </section>
+    <section class="main">
+        <div class="container text-and-image">
+            <div class="text">
+                <p class="center">La música y el estudio</p> 
+                <div class="contenedor-barra">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                    <div class="line7"></div>
+                    <div class="line8"></div>
+                    <div class="line9"></div>
+                    <div class="line10"></div>
+                    <div class="line11"></div>
+                    <div class="line12"></div>
+                    <div class="line13"></div>
+                    <div class="line14"></div>
+                    <div class="line15"></div>
+                    <div class="line16"></div>
+                    <div class="line17"></div>
+                </div>
+                <audio src="{{ url_for('static',filename='audios/claro-de-luna-moonlight-sonata-beethoven.mp3') }}" controls=""></audio>
+                <h3 class="centero">La música clasica ayuda mucho a la concentración</h3>
+             </div>
+        </div>
+    </section>
+
+    <section class="bg-principal section-padding">
+        <p class="center">Prueba tu habilidad</p> 
+        <a href="{{url_for('juego_2')}}"><img class="centrado" src="{{ url_for('static',filename='fotos/cat.png') }}" alt="Juego"></a>
+    </section>
+
+        
+    <script src="{{ url_for('static',filename='JavaScript/main.js') }}"></script>
+
+    <footer>
+       
+        <div class="container-footer-all">
+         
+             <div class="container-body">
+ 
+                 <div class="colum1">
+                     <h1>Información</h1>
+ 
+                     <p>En AcadeM@c nos dedicamos a la venta de cursos y asesorías la 
+                     finalidad de que cada miembro sea capaz de susperar las pruebas  
+                     que la eduación moderna les presenta.</p>
+
+                     <h2>Integrantes</h2>
+                     <p>Conde Muñoz Diana Polet</p>
+                     <p>Cortazar Gurza Victoria</p>
+                     <p>Puente Fragoso Alejandro</p>
+                     <p>Serratos Martínez Camilo</p>
+                 </div>
+ 
+                 <div class="colum2">
+                     <h1>Redes Sociales</h1>
+                     <div class="row">
+                         <img src="{{ url_for('static',filename='icon/facebook.png') }}">
+                         <label>Siguenos en Facebook</label>
+                     </div>
+                     <div class="row">
+                         <img src="{{ url_for('static',filename='icon/twitter.png') }}">
+                         <label>Siguenos en Twitter</label>
+                     </div>
+                     <div class="row">
+                         <img src="{{ url_for('static',filename='icon/instagram.png') }}">
+                         <label>Siguenos en Instagram</label>
+                     </div>
+                 </div>
+ 
+                 <div class="colum3">
+                     <h1>Contacto General</h1>
+ 
+                     <div class="row2">
+                         <img src="{{ url_for('static',filename='icon/house.png') }}">
+                         <label>Estado de México
+                             Nicolás Romero, Col.Buenvista
+                             Francisco I.Madero #7
+                         </label>
+                     </div>
+ 
+                     <div class="row2">
+                         <img src="{{ url_for('static',filename='icon/smartphone.png') }}">
+                         <label>+52 55 2947 3582</label>
+                     </div>
+ 
+                     <div class="row2">
+                         <img src="{{ url_for('static',filename='icon/contact.png') }}">
+                          <label>419080361@pcpuma.acatlan.unam.mx</label>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         
+         <div class="container-footer">
+                <div class="footer">
+                     <div class="copyright">
+                         © 2021 Todos los Derechos Reservados | <a href="">AcadeM@c</a>
+                     </div>
+ 
+                     <div class="information">
+                         <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                     </div>
+                 </div>
+             </div>
+     </footer>
+</body>
+</html>

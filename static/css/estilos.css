@@ -1,0 +1,792 @@
+/*Definidos de CSS*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+#sidebar {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background: rgba(218, 233, 7, 0.678);
+    left: -200px;
+    transition: all 500ms linear;
+}
+  
+#sidebar.active {
+    left: 0px;
+}
+  
+#sidebar ul li {
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#sidebar .toggle-btn {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+}
+  
+  #sidebar .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+:root{
+    --green: #33DB59;
+    --yellow: #F2CA2C;
+    --principal: #1ABC9C; 
+
+}
+
+/*Estilos globales*/
+
+body{
+    line-height: 1.7;
+    font-weight: 500;
+    word-wrap: break-word;
+    font-family: monse;
+    src: url(/letra/Montserrat-Regular.ttf)  
+}
+
+nav{
+    width: 70%;
+    height: 70px;
+   /* background-color: yellow;*/
+    float: left;
+    text-align: right;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    padding-left: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /*font-family: rale;
+    src: url(/letra/Raleway-Regular.ttf)*/
+}
+
+nav ul li a:hover{
+    color: #444;
+}
+
+audio{
+    width: 100%;
+}
+
+video{
+    width: 100%;
+}
+/*Estilos de utilidad*/
+
+.bg-yellow{
+    background-color: var(--yellow);
+}
+
+.bg-principal{
+    background-color: var(--principal);
+}
+
+.center-vertical-and-horizontal{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.container{
+    width: 70rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.center{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+.centero{
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.centra{
+    width: 450px;
+    height: 300px;
+    margin:10px auto;
+	display:block;
+}
+
+.centrado{
+    width: 150px;
+    height: 150px;
+    margin:10px auto;
+	display:block;
+}
+
+.green-underline{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.green-underline::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left:0;
+    height: 0.56rem;
+    background-color: var(--green);
+    width: 100%;
+    z-index: -1;
+}
+
+.section-padding{
+    padding: 4.25rem 2rem;
+}
+
+.subtitle{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.title, h1{
+    font-size: 4rem;
+}
+
+/*Estilos de componentes*/
+
+.ancho{
+    width: 80%;
+    height: 70px;
+   /* background-color: red;*/
+    margin: auto;
+    top:0;
+}
+
+.ancho a{
+    display: inline-block;
+    text-align: center;
+    transition: .5s ease-out all;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    flex-basis: 350px;
+    align-self: center;
+}
+
+.barra li a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 30%;
+    height: 70%;
+    /*background-color: green;*/
+    float: left;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.logo p a{
+    color: #fff;
+    font-size:40px;    
+    text-decoration: none;
+}
+
+.logr{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; 
+    text-decoration: none;
+}
+
+.main{
+    width: 80%;
+    margin: auto;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    display: block;
+}
+
+.menu li a:hover{
+    background: #1ABC9C;
+}
+
+.one{
+    width: 100%;
+    height: 75x;
+    background-color: #1ABC9C;
+    /*font-family: rale;
+    src: url(letra/Raleway-Regular.ttf)*/
+}
+
+.text-and-image{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: stretch;
+    text-align: center;
+    padding: 4.25rem 2rem;
+}
+
+.text-and-image.actions{
+    margin-bottom: 4.25rem;
+}
+
+.text-and-image.cover{
+    padding-bottom: 0;
+}
+
+.text-and-image .main-content{
+    display: grid;
+    gap: 3em;
+    flex-grow: 1;
+    grid-template-rows: auto minmax(0,1fr) auto;
+    justify-items: center;
+}
+
+
+@media(min-width:60rem){
+
+    .element-with-images{
+        display: flex;
+        flex-wrap: wrap;
+        gap:2em;
+    }
+
+    .element-with-images:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .element-with-images .text{
+        flex:1;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .element-with-images .images{
+        flex: 0 0 50%;
+        display: grid;
+    }
+
+    .element-with-images .images img:first-child{
+        grid-area: right-image;
+    }
+
+    .element-with-images .images img:last-child{
+        grid-area: left-image;
+    }
+
+    .text-and-image .text{
+        flex: 1;
+        text-align: left;
+    }
+    .text-and-image .main-content{
+        justify-items: start;
+        
+    }
+    .text-and-image{
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+footer{
+    width: 100%;
+    background: #202020;
+    color: white;   
+    
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+
+.colum1 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.colum4 h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+.colum4 p{
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.colum5 h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+.colum5 p{
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.colum6 h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+.colum6 p{
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.colum7 h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+.colum7 p{
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.colum2{
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1{
+        max-width: 100%;
+    }
+    
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
+.contenedor-barra{
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    transform: rotate(180deg);
+}
+
+.line1{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: uno .5s infinite ease-out;
+}
+
+@keyframes uno{
+	50%{
+		height: 30px;
+	}
+	100%{
+		height: 150px;
+	}
+}
+
+.line2{
+	width: 50px;
+	height: 200px;
+	background-color: white;
+	animation: dos .5s infinite ease-out;
+	animation-duration: 1s;
+	
+}
+@keyframes dos{
+	50%{
+		 height: 20px;
+	}
+	
+	100%{
+		 height: 160px;
+	}
+}
+.line3{
+	width: 50px;
+	height: 200px;
+	background-color: black;
+	animation: tres .5s infinite ease-out;
+}
+@keyframes tres{
+	50%{
+		 height: 0px;
+	}
+	
+	100%{
+		 height: 170px;
+	}
+}
+.line4{
+	width: 50px;
+	height: 200px;
+	background-color: white;
+	animation: cuatro .5s infinite ease-out;
+}
+@keyframes cuatro{
+	50%{
+		 height: 90px;
+	}
+	
+	100%{
+		 height: 150px;
+	}
+}
+.line5{
+	width: 50px;
+	height: 200px;
+	background-color: black;
+	animation: cinco .5s infinite ease-out;
+}
+@keyframes cinco{
+	50%{
+		 height: 50px;
+	}
+	
+	100%{
+		 height: 200px;
+	}
+}
+.line6{
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: seis .5s infinite ease-out;
+}
+@keyframes seis{
+	50%{
+		 height: 200px;
+	}
+	
+	100%{
+		 height: 250px;
+	}
+}
+
+.line8{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: ocho .5s infinite ease-out;
+}
+
+@keyframes ocho{
+	50%{
+		 height: 10px;
+	}
+	
+	100%{
+		 height: 300px;
+	}
+}
+
+.line9{
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: nueve .5s infinite ease-out;
+}
+
+@keyframes nueve{
+	50%{
+		 height: 60px;
+	}
+	
+	100%{
+		 height: 100px;
+	}
+}
+
+.line10{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: diez .5s infinite ease-out;
+}
+
+@keyframes diez{
+	50%{
+		 height: 15px;
+	}
+	
+	100%{
+		 height: 270px;
+	}
+}
+
+.line11{
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: once .5s infinite ease-out;
+}
+
+@keyframes once{
+	50%{
+		 height: 50px;
+	}
+	
+	100%{
+		 height: 180px;
+	}
+}
+
+.line12{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: doce .5s infinite ease-out;
+}
+
+@keyframes doce{
+	50%{
+		 height: 80px;
+	}
+	
+	100%{
+		 height: 180px;
+	}
+}
+
+.line13{
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: trece .5s infinite ease-out;
+}
+
+@keyframes trece{
+	50%{
+		 height: 140px;
+	}
+	
+	100%{
+		 height: 250px;
+	}
+}
+
+.line14{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: catorce .5s infinite ease-out;
+}
+
+@keyframes catorce{
+	50%{
+		 height: 110px;
+	}
+	
+	100%{
+		 height: 290px;
+	}
+}
+
+.line15{
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: quince .5s infinite ease-out;
+}
+
+@keyframes quince{
+	50%{
+		 height: 250px;
+	}
+	
+	100%{
+		 height: 300px;
+	}
+}
+
+.line16{
+	width: 50px;
+	height: 300px;
+	background-color: black;
+	animation: diezyseis .5s infinite ease-out;
+}
+
+@keyframes diezyseis{
+	50%{
+		 height: 100px;
+	}
+	
+	100%{
+		 height: 220px;
+	}
+}
+
+.line17{ 
+	width: 50px;
+	height: 300px;
+	background-color: white;
+	animation: diezisiete .5s infinite ease-out;
+}
+
+@keyframes diezisiete{
+	50%{
+		 height: 150px;
+	}
+	
+	100%{
+		 height: 250px;
+	}
+}
+
+
+
+
+  
+  
+  
