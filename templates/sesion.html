@@ -13,25 +13,28 @@
 </head>
 <body>
     <h2>Formulario de registro</h2>
-
-    <form action="/action_page.php">
-      <label for="Nombre">Nombre(s):</label><br>
-      <input type="text" id="Nombre" name="Nombre" ><br>
-      <label for="AP">Apellido Paterno:</label><br>
-      <input type="text" id="AP" name="AP" ><br><br>
-      <label for="AM">Apellido Materno:</label><br>
-      <input type="text" id="AM" name="AM" ><br><br>
-      <label for="Ncuenta">Nuero de cuenta:</label><br>
-      <input type="number" id="Ncuenta" name="Ncuenta"><br><br>
+    <form action="{{ url_for('guardarInput')}}" method="POST">
+      <!--  Nombre  -->
+      <label for="nombre">Nombre(s):</label><br>
+      <input type="text" name="nombre" placeholder="Nombre(s)" class="form-control" autofocus><br>
+      <!--  Apellido Paterno  -->
+      <label for="apellidoPaterno">Apellido Paterno:</label><br>
+      <input type="text" name="apellidoPaterno" placeholder="Apellido paterno" class="form-control" ><br><br>
+      <!--  Apellido Materno  -->
+      <label for="apellidoMaterno">Apellido Materno:</label><br>
+      <input type="text" name="apellidoMaterno" placeholder="Apellido materno" class="form-control" ><br><br>
+      <!--  No. de Cuenta  -->
+      <label for="numeroCta">Numero de cuenta:</label><br>
+      <input type="number" name="numeroCta" placeholder="No. de Cuenta" class="form-control"><br><br>
+      <!--  Nivel Academico -->
       <p>Nivel academico:</p>
-      <input type="radio" id="nivel1" name="nivel" value="30">
-      <label for="nivel1">Primario</label><br>
-      <input type="radio" id="nivel2" name="nivel" value="60">
+      <input type="radio" name="estudios" value="Primaria" class="form-control">
+      <label for="nivel1">Primaria</label><br>
+      <input type="radio" name="estudios" value="Secundaria" class="form-control">
       <label for="nivel2">Secundaria</label><br>
-      <input type="radio" id="nivel3" name="nivel" value="100">
+      <input type="radio" name="estudios" value="Preparatoria" class="form-control">
       <label for="nivel3">Preparatoria</label><br><br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="submit">
     </form> 
-    <p></p>
 </body>
 </html>

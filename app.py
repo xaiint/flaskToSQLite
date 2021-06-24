@@ -6,9 +6,6 @@ import sqlite3
 
 app = Flask(__name__)
 
-# variableBase de SQLite
-DATABASE = 'resultados.db'
-
 # rutasServer
 @app.route("/")
 def index():
@@ -38,12 +35,31 @@ def contactos():
 def juego():
     return render_template("juego.html")
 
+# metodosDatabase
+@app.route('/guardarInput', methods=['POST'])
+def guardarInput():
+    con = sqlite3.connect("database/registros.db")
+    if request.method == "POST":
+        try:
+            nombre = request.form["nombre"]
+            apellidoPaterno = request.form["apellidoPaterno"]
+            apellidoMaterno = request.form["apellidoMaterno"]
+            numeroCta = request.form["numeroCta"]
+            estudios = request.form["estudios"]
+
+            cur = con.cursor()
+            cur.execute("INSERT INTO alumnos (nombre,apellidoPaterno,apellidoMaterno,numeroCta,estudios) values (?,?,?,?,?)",(nombre,apellidoPaterno,apellidoMaterno,numeroCta,estudios))
+            con.commit()
+            print("Usuario agregado correctamente")
+            return render_template("salvado.html")
+        except:
+            con.rollback()
+            print("El usuario no fue agregado")
+            return render_template("404.html")
+        finally:
+            con.close()
+            
+
+# modoDesarrollo
 if __name__ == '__main__':
     app.run(debug=True)
-
-# llamarBaseDeDatos
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
