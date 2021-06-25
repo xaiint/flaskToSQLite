@@ -34,7 +34,79 @@
       <label for="nivel2">Secundaria</label><br>
       <input type="radio" name="estudios" value="Preparatoria" class="form-control">
       <label for="nivel3">Preparatoria</label><br><br>
-      <input type="submit" value="submit">
+      <input type="submit" value="Enviar">
     </form> 
+    <footer>
+       
+      <div class="container-footer-all">
+       
+           <div class="container-body">
+
+               <div class="colum1">
+                   <h1>Información</h1>
+
+                   <p>En AcadeM@c nos dedicamos a la venta de cursos y asesorías la 
+                   finalidad de que cada miembro sea capaz de susperar las pruebas  
+                   que la eduación moderna les presenta.</p>
+
+                   <h2>Integrantes</h2>
+                   <p>Conde Muñoz Diana Polet</p>
+                   <p>Cortazar Gurza Victoria</p>
+                   <p>Puente Fragoso Alejandro</p>
+                   <p>Serratos Martínez Camilo</p>
+               </div>
+
+               <div class="colum2">
+                   <h1>Redes Sociales</h1>
+                   <div class="row">
+                       <img src="{{ url_for('static',filename='icon/facebook.png') }}">
+                       <label>Siguenos en Facebook</label>
+                   </div>
+                   <div class="row">
+                       <img src="{{ url_for('static',filename='icon/twitter.png') }}">
+                       <label>Siguenos en Twitter</label>
+                   </div>
+                   <div class="row">
+                       <img src="{{ url_for('static',filename='icon/instagram.png') }}">
+                       <label>Siguenos en Instagram</label>
+                   </div>
+               </div>
+
+               <div class="colum3">
+                   <h1>Contacto General</h1>
+
+                   <div class="row2">
+                       <img src="{{ url_for('static',filename='icon/house.png') }}">
+                       <label>Estado de México
+                           Nicolás Romero, Col.Buenvista
+                           Francisco I.Madero #7
+                       </label>
+                   </div>
+
+                   <div class="row2">
+                       <img src="{{ url_for('static',filename='icon/smartphone.png') }}">
+                       <label>+52 55 2947 3582</label>
+                   </div>
+
+                   <div class="row2">
+                       <img src="{{ url_for('static',filename='icon/contact.png') }}">
+                        <label>419080361@pcpuma.acatlan.unam.mx</label>
+                   </div>
+               </div>
+           </div>
+       </div>
+       
+       <div class="container-footer">
+              <div class="footer">
+                   <div class="copyright">
+                       © 2021 Todos los Derechos Reservados | <a href="">AcadeM@c</a>
+                   </div>
+
+                   <div class="information">
+                       <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                   </div>
+               </div>
+           </div>
+   </footer>
 </body>
 </html>

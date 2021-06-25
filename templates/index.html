@@ -55,7 +55,13 @@
             <nav>
                 <ul class="tabs">
                     <li><a href="{{ url_for('sesion') }}"><span class="icon-user"></span>Registro</a></li>
-                    <li><a href="{{ url_for('nosotros') }}"><span class="icon-users"></span>Nosotros</a></li> 
+                    <!--<li><a href="{{ url_for('nosotros') }}"><span class="icon-users"></span>Nosotros</a></li> -->
+                    <li><a href="javascript:ventana('{{ url_for('nosotros') }}')"><span class="icon-users"></span>Usuarios</a></li> 
+                    <script>
+                        function ventana(URL) {
+                            window.open(URL,"ventana","width=600,height=300,top=200,left=400")   
+                        }
+                    </script>
                     <li><a href="{{ url_for('contactos')}}"><span class="icon-phone"></span>Contáctanos</a></li>
                 </ul>
             </nav>

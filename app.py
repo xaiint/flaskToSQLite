@@ -15,10 +15,6 @@ def index():
 def sesion():
     return render_template("sesion.html")
 
-@app.route('/nosotros')
-def nosotros():
-    return render_template("nosotros.html")
-
 @app.route('/juego_2')
 def juego_2():
     return render_template("juego_2.html")
@@ -51,14 +47,34 @@ def guardarInput():
             cur.execute("INSERT INTO alumnos (nombre,apellidoPaterno,apellidoMaterno,numeroCta,estudios) values (?,?,?,?,?)",(nombre,apellidoPaterno,apellidoMaterno,numeroCta,estudios))
             con.commit()
             print("Usuario agregado correctamente")
-            return render_template("salvado.html")
+            return redirect(url_for('nosotros'))
         except:
             con.rollback()
             print("El usuario no fue agregado")
             return render_template("404.html")
         finally:
             con.close()
-            
+
+@app.route('/nosotros')
+def nosotros():
+    con = sqlite3.connect("database/registros.db")
+    con.row_factory = sqlite3.Row
+    cur = con.cursor()
+    cur.execute("SELECT * FROM alumnos")
+    row = cur.fetchall()
+    return render_template("nosotros.html", filas = row)
+    
+@app.route('/datos', methods=['POST'])
+def datos():
+    con = sqlite3.connect("database/registros.db")
+    numeroCta =request.form["numeroCta"]
+    sql='DELETE FROM alumnos WHERE numeroCta=?'
+    cur = con.cursor()
+    cur.execute(sql, (numeroCta,))
+    con.commit()
+    return redirect(url_for('nosotros'))
+    print('Exito')
+
 
 # modoDesarrollo
 if __name__ == '__main__':

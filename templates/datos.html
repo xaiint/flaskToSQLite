@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+</head>
+<body>
+    <h2>Alumnos Registrados</h2>
+    <table border="2">
+        {% for fila in filas %}
+            <tr>
+                <td>{{fila["nombre"]}}</td>
+                <td>{{fila["apellidoPaterno"]}}</td>
+                <td>{{fila["apellidoMaterno"]}}</td>
+                <td>{{fila["numeroCta"]}}</td>
+                <td>{{fila["estudios"]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>     </tr>
+    </table>
+</body>
+</html>

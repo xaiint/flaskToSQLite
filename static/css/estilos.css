@@ -1,5 +1,7 @@
 /*Definidos de CSS*/
 
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -784,9 +786,51 @@ footer{
 	}
 }
 
+h2{
+    background-color: #1ABC9C;
+    text-align: center;
+    font-size: xx-large;
+    color: #fff;
+   
+    }
+form{
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    font-size:large;
+}
 
+table.center{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: larger;
+    border-collapse: collapse;
+}
+tr.chidito {
+ 
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
 
+body.nosotros{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+h1.contacto{
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    
+}
+body.contactanos{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  
-  
-  
+}
